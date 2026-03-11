@@ -14,7 +14,7 @@ const Contact: React.FC = () => {
             <a href="mailto:hekaifeng70@gmail.com" className="contact-link">
               Email
             </a>
-            <a href="https://github.com/Arw-Wow" target="_blank" rel="noopener noreferrer" className="contact-link">
+            <a href="https://github.com/kaifeng-he" target="_blank" rel="noopener noreferrer" className="contact-link">
               GitHub
             </a>
             {/* <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="contact-link">

@@ -95,22 +95,22 @@ const Research: React.FC = () => {
         <div className="grants-list">
           <Grant 
             title="基于工程规范约束的代码智能体可控生成与质量治理研究"
-            program="中山大学大学生创新创业训练项目"
-            role="Project Lead (National Level)"
+            program="中山大学大学生创新创业训练项目（国家级）"
+            role="主持人 / Project Lead"
             period="2026"
             funding="¥24,000"
           />
           <Grant 
             title="面向代码大模型生成质量问题的训练数据归因与治理技术"
-            program="中山大学大学生创新创业训练项目"
-            role="Project Lead (University Level)"
+            program="中山大学大学生创新创业训练项目（校级）"
+            role="主持人 / Project Lead"
             period="2025"
             funding="¥6,000"
           />
           <Grant 
             title="面向消费级显卡的自适应大模型异构推理系统设计与实现"
-            program="中山大学大学生创新创业训练项目"
-            role="成员 / Member (University Level)"
+            program="中山大学大学生创新创业训练项目（校级）"
+            role="成员 / Member"
             period="2026"
             funding="¥6,000"
           />

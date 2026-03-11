@@ -1,0 +1,113 @@
+@import '../styles/global.css';
+
+.hero-section {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.hero-avatar {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background-color: var(--section-bg);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -1rem;
+}
+
+.hero-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-text-content {
+  flex: 1;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: 4.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.title-cn {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-left: 1rem;
+  opacity: 0.6;
+}
+
+.hero-subtitle {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  color: var(--accent-color);
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.hero-description {
+  font-size: 1.15rem;
+  color: var(--secondary-color);
+  max-width: 600px;
+  margin-bottom: 3rem;
+  font-weight: 300;
+}
+
+.hero-description strong {
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.btn-academic {
+  padding: 0.7rem 1.8rem;
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-right: 1.5rem;
+}
+
+.btn-academic.secondary {
+  border-color: var(--border-color);
+  color: var(--secondary-color);
+}
+
+.btn-academic:hover {
+  background-color: var(--text-color);
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 850px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  .hero-title {
+    font-size: 3rem;
+  }
+  .title-cn {
+    font-size: 2rem;
+    display: block;
+    margin-left: 0;
+  }
+}

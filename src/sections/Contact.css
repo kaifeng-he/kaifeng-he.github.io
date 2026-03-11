@@ -1,0 +1,46 @@
+@import '../styles/global.css';
+
+.contact-section {
+  text-align: center;
+}
+
+.contact-content {
+  margin-top: 2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-content p {
+  font-size: 1.15rem;
+  margin-bottom: 4rem;
+  font-weight: 300;
+  color: var(--secondary-color);
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.contact-link {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-color);
+  padding: 0.8rem 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.contact-link:hover {
+  border-bottom-color: var(--accent-color);
+  text-decoration: none;
+}
+
+@media (max-width: 480px) {
+  .contact-links {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}

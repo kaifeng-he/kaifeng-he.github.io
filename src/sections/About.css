@@ -1,0 +1,47 @@
+@import '../styles/global.css';
+
+.about-content {
+  margin-top: 4rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-content p {
+  margin-bottom: 2rem;
+  font-size: 1.15rem;
+  font-weight: 300;
+  color: var(--secondary-color);
+  text-align: justify;
+}
+
+.about-content strong {
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.research-interests {
+  margin-top: 5rem;
+}
+
+.research-interests h3 {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 400;
+}
+
+.interest-tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.interest-tags span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--secondary-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: 0.3rem 0;
+}

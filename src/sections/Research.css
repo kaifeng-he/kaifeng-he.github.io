@@ -41,7 +41,7 @@
   flex-shrink: 0;
   border: 1px solid var(--border-color);
   padding: 0.5rem;
-  background-color: #fff;
+  background-color: var(--bg-color);
 }
 
 .pub-image img {
@@ -73,7 +73,7 @@
 }
 
 .co-first-tag {
-  background-color: rgba(0, 88, 38, 0.08);
+  background-color: var(--border-color);
   color: var(--accent-color);
 }
 

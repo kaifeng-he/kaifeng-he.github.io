@@ -5,13 +5,14 @@ const About: React.FC = () => {
   return (
     <section id="about" className="section-alt">
       <div className="container">
-        <h2>About Me</h2>
+        <h2>About</h2>
         <div className="about-content">
           <p>
-            I am an undergraduate student at <strong>Sun Yat-sen University</strong> (School of Software Engineering, Zhuhai Campus). Currently based in <strong>Guangdong (Zhuhai / Shenzhen)</strong>, I am passionate about creating efficient, reliable, and meaningful software systems.
+            <strong>Kaifeng He (何恺锋)</strong> is an undergraduate student at the <strong><a href="https://sse.sysu.edu.cn/" target="_blank" rel="noopener noreferrer">School of Software Engineering, Sun Yat-sen University (中山大学)</a></strong>. Currently based in <strong>Guangdong (Zhuhai / Shenzhen)</strong>, he is passionate about creating efficient, reliable, and meaningful software systems.
           </p>
+
           <p>
-            My research interests lie in the intersection of <strong>Large Language Models (LLMs)</strong> and <strong>Software Engineering (SE)</strong>. I strive to improve the quality and robustness of AI-generated code through data-driven insights and systematic analysis.
+            His research interests lie in the intersection of <strong>Large Language Models (LLMs)</strong> and <strong>Software Engineering (SE)</strong>. He strives to improve the quality and robustness of AI-generated code through data-driven insights and systematic analysis.
           </p>
           
           <div className="research-interests">

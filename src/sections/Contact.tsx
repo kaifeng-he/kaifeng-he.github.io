@@ -8,7 +8,7 @@ const Contact: React.FC = () => {
         <h2>Get in Touch</h2>
         <div className="contact-content">
           <p>
-            Whether you're interested in my research, have a question, or just want to say hi, feel free to reach out!
+            Whether you're interested in his research, have a question, or just want to say hi, feel free to reach out!
           </p>
           <div className="contact-links">
             <a href="mailto:hekaifeng70@gmail.com" className="contact-link">

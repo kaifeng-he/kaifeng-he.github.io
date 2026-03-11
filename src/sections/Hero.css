@@ -92,7 +92,7 @@
 
 .btn-academic:hover {
   background-color: var(--text-color);
-  color: #fff;
+  color: var(--bg-color);
   text-decoration: none;
 }
 
@@ -103,11 +103,25 @@
     gap: 2rem;
   }
   .hero-title {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
   .title-cn {
     font-size: 2rem;
     display: block;
     margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.8rem;
+  }
+  .hero-subtitle {
+    font-size: 1.4rem;
+  }
+  .btn-academic {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 1rem;
   }
 }

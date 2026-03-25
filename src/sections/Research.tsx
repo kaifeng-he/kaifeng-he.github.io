@@ -65,9 +65,8 @@ const Research: React.FC = () => {
           <Publication 
             title="Towards Better Code Generation: Adaptive Decoding with Uncertainty Guidance"
             authors={<><strong>Kaifeng He</strong>, Mingwei Liu, Chong Wang, Zike Li, Yanlin Wang, Xin Peng, Zibin Zheng</>}
-            venue="arXiv:2506.08980, 2025"
+            venue="ACM International Conference on the Foundations of Software Engineering (FSE), 2026"
             link="https://arxiv.org/abs/2506.08980"
-            isPreprint={true}
             image="/adadec-overview.png"
             description="Proposed ADADEC, an uncertainty-guided adaptive decoding framework that optimizes code generation by dynamically detecting high-uncertainty steps and triggering lookahead-based reranking."
           />

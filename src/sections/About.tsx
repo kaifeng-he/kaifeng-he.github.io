@@ -21,7 +21,7 @@ const About: React.FC = () => {
               <span>LLM4SE</span>
               <span>Code Generation</span>
               {/* <span>Data Quality Attribution</span> */}
-              <span>Autonomous Agents</span>
+              <span>LLM-based Agents</span>
             </div>
           </div>
         </div>

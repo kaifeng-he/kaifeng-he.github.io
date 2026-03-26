@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
             Undergraduate Researcher @ <a href="https://sysuselab.github.io/" target="_blank" rel="noreferrer" className="lab-link">SYSU SE Lab</a>
           </p>
           <div className="hero-description">
-            Focused on <strong>LLM4SE</strong>, Code Generation, and Autonomous Agents. 
+            Focused on <strong>LLM4SE</strong>, Code Generation, and LLM-based Agents. 
             Advised by <a href="https://mingwei-liu.github.io/" target="_blank" rel="noreferrer">Prof. Mingwei Liu</a>.
           </div>
           <div className="hero-cta">

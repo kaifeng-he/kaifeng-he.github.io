@@ -23,6 +23,7 @@ const Hero: React.FC = () => {
           <div className="hero-cta">
             <a href="#research" className="btn-academic">View Publications</a>
             <a href="#grants" className="btn-academic">View Projects</a>
+            <a href="https://scholar.google.com/citations?user=67fge3IAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" className="btn-academic">Google Scholar</a>
           </div>
         </div>
       </div>

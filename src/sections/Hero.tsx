@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
             <img src="/avatar.jpg" alt="He Kaifeng" onError={(e) => (e.currentTarget.style.display = 'none')} />
           </div>
           <div className="hero-social-links">
-            <a href="mailto:hekaifeng70@gmail.com" title="Email">Email</a>
+            <a href="mailto:hekf5@mail2.sysu.edu.cn" title="Email">Email</a>
             <a href="https://github.com/kaifeng-he" target="_blank" rel="noopener noreferrer" title="GitHub">GitHub</a>
             <a href="https://scholar.google.com/citations?user=67fge3IAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" title="Google Scholar">Scholar</a>
           </div>

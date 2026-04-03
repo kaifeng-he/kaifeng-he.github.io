@@ -11,7 +11,7 @@ const Contact: React.FC = () => {
             Whether you're interested in his research, have a question, or just want to say hi, feel free to reach out!
           </p>
           <div className="contact-links">
-            <a href="mailto:hekaifeng70@gmail.com" className="contact-link">
+            <a href="mailto:hekf5@mail2.sysu.edu.cn" className="contact-link">
               Email
             </a>
             <a href="https://github.com/kaifeng-he" target="_blank" rel="noopener noreferrer" className="contact-link">

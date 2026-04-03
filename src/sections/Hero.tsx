@@ -6,7 +6,7 @@ const Hero: React.FC = () => {
     <section id="hero" className="hero-section">
       <div className="container hero-container">
         <div className="hero-avatar">
-          <img src="/avatar.png" alt="He Kaifeng" onError={(e) => (e.currentTarget.style.display = 'none')} />
+          <img src="/avatar.jpg" alt="He Kaifeng" onError={(e) => (e.currentTarget.style.display = 'none')} />
           {/* If no image, a subtle placeholder appears via CSS */}
         </div>
         <div className="hero-text-content">

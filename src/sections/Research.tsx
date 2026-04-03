@@ -76,6 +76,7 @@ const Research: React.FC = () => {
             authors={<>Authors to be finalized</>}
             venue="Under Review, 2026"
             coFirst={true}
+            image="/survey-overview.png"
             description="A systematic review linking training data defects to generated code quality in Code LLMs, establishing a multi-dimensional taxonomy and causal mapping framework."
           />
 

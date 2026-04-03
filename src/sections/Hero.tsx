@@ -6,8 +6,14 @@ const Hero: React.FC = () => {
     <section id="hero" className="hero-section">
       <div className="container hero-container">
         <div className="hero-avatar">
-          <img src="/avatar.jpg" alt="He Kaifeng" onError={(e) => (e.currentTarget.style.display = 'none')} />
-          {/* If no image, a subtle placeholder appears via CSS */}
+          <div className="avatar-container">
+            <img src="/avatar.jpg" alt="He Kaifeng" onError={(e) => (e.currentTarget.style.display = 'none')} />
+          </div>
+          <div className="hero-social-links">
+            <a href="mailto:hekaifeng70@gmail.com" title="Email">Email</a>
+            <a href="https://github.com/kaifeng-he" target="_blank" rel="noopener noreferrer" title="GitHub">GitHub</a>
+            <a href="https://scholar.google.com/citations?user=67fge3IAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" title="Google Scholar">Scholar</a>
+          </div>
         </div>
         <div className="hero-text-content">
           <h1 className="hero-title">
@@ -23,7 +29,6 @@ const Hero: React.FC = () => {
           <div className="hero-cta">
             <a href="#research" className="btn-academic">View Publications</a>
             <a href="#grants" className="btn-academic">View Projects</a>
-            <a href="https://scholar.google.com/citations?user=67fge3IAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" className="btn-academic">Google Scholar</a>
           </div>
         </div>
       </div>

@@ -114,7 +114,7 @@ const Research: React.FC = () => {
             title="Research on Controllable Generation and Quality Governance of Code Agents under Engineering Specification Constraints"
             program="China National-Level Innovation Project"
             role="Project Leader"
-            period="2026"
+            period="2026–Present"
             funding="¥24,000"
             description="This project focuses on 'Engineering Specification-Driven Code Generation and Quality Governance,' aiming to build a mechanism that actively guarantees code architectural quality. Key research includes: 1) Constructing structured knowledge bases for engineering specs to bridge natural language and machine-parsable rules. 2) Developing collaborative control techniques using RAG and decoding intervention to block non-compliant code during inference. 3) Establishing adaptive evolution mechanisms for agents to perceive different engineering environments and repair non-standard modules."
           />
@@ -122,7 +122,7 @@ const Research: React.FC = () => {
             title="Training Data Attribution and Governance Techniques for Code Generation Quality Issues in LLMs"
             program="China University-Level Innovation Project"
             role="Project Leader"
-            period="2025"
+            period="2025–2026"
             funding="¥6,000"
             description="This project investigates the link between training data defects (e.g., duplicated samples, deprecated APIs) and code generation issues like hallucinations. We aim to trace generation errors back to training data, automatically identifying quality problems to provide an interpretable, white-box method for enhancing the safety, trustworthiness, and reliability of code LLMs."
           />
@@ -130,7 +130,7 @@ const Research: React.FC = () => {
             title="Design and Implementation of an Adaptive Large Model Heterogeneous Inference System for Consumer GPUs"
             program="China University-Level Innovation Project"
             role="Member"
-            period="2026"
+            period="2026–Present"
             funding="¥6,000"
             description="This project aims to address the 'memory wall' and high latency of LLM deployment on consumer hardware by designing an adaptive GPU-CPU heterogeneous inference system. Based on the 'Online Neuron Balancing' architecture, it utilizes sparse activation and temporal caching to dynamically schedule high-value neurons to the GPU, aiming to achieve deep overlap between computation and I/O. The project also explores extending this framework to Mixture-of-Experts (MoE) architectures."
           />

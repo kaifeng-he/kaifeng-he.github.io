@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './sections/Hero';
 import Research from './sections/Research';
+import Hobbies from './sections/Hobbies';
 import Contact from './sections/Contact';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
       <main>
         <Hero />
         <Research />
+        <Hobbies />
         <Contact />
       </main>
       <footer className="footer container">

@@ -22,6 +22,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
           <ul className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
             <li><a href="#research" onClick={closeMenu}>Research</a></li>
             <li><a href="#grants" onClick={closeMenu}>Projects</a></li>
+            <li><a href="#hobbies" onClick={closeMenu}>Hobbies</a></li>
             <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
           </ul>
           <div className="navbar-actions">

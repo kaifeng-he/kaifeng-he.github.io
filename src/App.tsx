@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './sections/Hero';
-import About from './sections/About';
 import Research from './sections/Research';
 import Contact from './sections/Contact';
 
@@ -26,7 +25,6 @@ function App() {
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <main>
         <Hero />
-        <About />
         <Research />
         <Contact />
       </main>

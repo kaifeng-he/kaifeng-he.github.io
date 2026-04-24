@@ -92,6 +92,7 @@ const Research: React.FC = () => {
             title="Bridging Generation and Training: A Systematic Review of Quality Issues in LLMs for Code"
             authors={<><strong>Kaifeng He*</strong>, Xiaojun Zhang*, Peiliang Cai*, Mingwei Liu, Yanlin Wang, Chong Wang, Kaifeng Huang, Bihuan Chen, Xin Peng, Zibin Zheng</>}
             venue="Under Review, TOSEM 2026"
+            link="https://sysuselab.github.io/From-Data-to-Code"
             // coFirst={true}
             image="/survey-overview.png"
             description="A systematic review linking training data defects to generated code quality in Code LLMs, establishing a multi-dimensional taxonomy and causal mapping framework."

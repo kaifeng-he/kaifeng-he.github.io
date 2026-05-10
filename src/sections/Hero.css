@@ -213,3 +213,22 @@
     width: 100%;
   }
 }
+
+@media (max-width: 360px) {
+  .hero-title {
+    font-size: 2.35rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .avatar-container,
+  .hero-avatar {
+    width: 190px;
+  }
+
+  .avatar-container {
+    height: 225px;
+  }
+}

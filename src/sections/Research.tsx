@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useId, useState } from 'react';
 import './Research.css';
 
 interface PublicationProps {
@@ -17,7 +17,7 @@ const Publication: React.FC<PublicationProps> = ({ title, authors, venue, link, 
     <div className="pub-content-wrapper">
       <div className="pub-info">
         <h3 className="pub-title">
-          {link ? <a href={link} target="_blank" rel="noreferrer">{title}</a> : title}
+          {link ? <a href={link} target="_blank" rel="noopener noreferrer">{title}</a> : title}
           {isPreprint && <span className="preprint-tag">Preprint</span>}
           {coFirst && <span className="co-first-tag">Co-first author</span>}
         </h3>
@@ -27,7 +27,7 @@ const Publication: React.FC<PublicationProps> = ({ title, authors, venue, link, 
       </div>
       {image && (
         <div className="pub-image">
-          <img src={image} alt={`${title} overview`} />
+          <img src={image} alt={`${title} overview`} loading="lazy" />
         </div>
       )}
     </div>
@@ -45,31 +45,40 @@ interface GrantProps {
 
 const Grant: React.FC<GrantProps> = ({ title, role, period, funding, program, description }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const descriptionId = useId();
 
   return (
-    <div className={`grant-item ${isExpanded ? 'expanded' : ''}`} onClick={() => setIsExpanded(!isExpanded)}>
+    <article className={`grant-item ${isExpanded ? 'expanded' : ''}`}>
       {program && <div className="grant-program">{program}</div>}
-      <div className="grant-header">
-        <span className="grant-title">
-          {title}
-          <span className={`expand-icon ${isExpanded ? 'up' : 'down'}`}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
+      <button
+        className="grant-toggle"
+        type="button"
+        aria-expanded={isExpanded}
+        aria-controls={description ? descriptionId : undefined}
+        onClick={() => setIsExpanded(!isExpanded)}
+      >
+        <span className="grant-header">
+          <span className="grant-title">
+            {title}
+            <span className={`expand-icon ${isExpanded ? 'up' : 'down'}`} aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </span>
           </span>
+          <span className="grant-funding">{funding}</span>
         </span>
-        <span className="grant-funding">{funding}</span>
-      </div>
+      </button>
       <div className="grant-meta">
         <span className="grant-role">{role}</span>
         <span className="grant-period">{period}</span>
       </div>
       {description && (
-        <div className={`grant-description ${isExpanded ? 'show' : ''}`}>
+        <div id={descriptionId} className={`grant-description ${isExpanded ? 'show' : ''}`}>
           <p>{description}</p>
         </div>
       )}
-    </div>
+    </article>
   );
 };
 
@@ -91,7 +100,7 @@ const Research: React.FC = () => {
           <Publication 
             title="Bridging Generation and Training: A Systematic Review of Quality Issues in LLMs for Code"
             authors={<><strong>Kaifeng He*</strong>, Xiaojun Zhang*, Peiliang Cai*, Mingwei Liu, Yanlin Wang, Chong Wang, Kaifeng Huang, Bihuan Chen, Xin Peng, Zibin Zheng</>}
-            venue="Under Review, TOSEM 2026"
+            venue="Manuscript under review"
             link="https://sysuselab.github.io/From-Data-to-Code"
             // coFirst={true}
             image="/survey-overview.png"

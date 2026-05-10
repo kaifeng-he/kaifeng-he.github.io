@@ -8,7 +8,7 @@ const Contact: React.FC = () => {
         <h2>Get in Touch</h2>
         <div className="contact-content">
           <p>
-            Whether you're interested in his research, have a question, or just want to say hi, feel free to reach out!
+            For research discussions, collaboration opportunities, or questions, feel free to reach out by email.
           </p>
           <div className="contact-links">
             <a href="mailto:hekf5@mail2.sysu.edu.cn" className="contact-link">
@@ -20,9 +20,6 @@ const Contact: React.FC = () => {
             <a href="https://scholar.google.com/citations?user=67fge3IAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" className="contact-link">
               Google Scholar
             </a>
-            {/* <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="contact-link">
-              LinkedIn
-            </a> */}
           </div>
         </div>
       </div>

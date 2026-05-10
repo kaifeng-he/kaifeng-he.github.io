@@ -8,7 +8,14 @@ const Hero: React.FC = () => {
         <div className="hero-top">
           <div className="hero-avatar">
             <div className="avatar-container">
-              <img src="/avatar.jpg" alt="He Kaifeng" onError={(e) => (e.currentTarget.style.display = 'none')} />
+              <img
+                src="/avatar.jpg"
+                alt="Portrait of He Kaifeng"
+                width="220"
+                height="260"
+                fetchPriority="high"
+                onError={(e) => (e.currentTarget.style.display = 'none')}
+              />
             </div>
             <div className="hero-social-links">
               <a href="mailto:hekf5@mail2.sysu.edu.cn" title="Email">Email</a>
@@ -21,11 +28,11 @@ const Hero: React.FC = () => {
               He Kaifeng <span className="title-cn">何恺锋</span>
             </h1>
             <p className="hero-subtitle">
-              Undergraduate Researcher @ <a href="https://sysuselab.github.io/" target="_blank" rel="noreferrer" className="lab-link">SYSU SE Lab</a>
+              Undergraduate Researcher @ <a href="https://sysuselab.github.io/" target="_blank" rel="noopener noreferrer" className="lab-link">SYSU SE Lab</a>
             </p>
             <div className="hero-description">
               Focused on the intersection of LLMs and Code Intelligence, with an emphasis on decoding strategies, reasoning enhancement, and knowledge-augmented methods. 
-              Advised by <a href="https://mingwei-liu.github.io/" target="_blank" rel="noreferrer">Prof. Mingwei Liu</a> at Sun Yat-sen University.
+              Advised by <a href="https://mingwei-liu.github.io/" target="_blank" rel="noopener noreferrer">Prof. Mingwei Liu</a> at Sun Yat-sen University.
             </div>
             <div className="hero-cta">
               <a href="#research" className="btn-academic">View Publications</a>

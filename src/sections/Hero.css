@@ -91,7 +91,7 @@
 .hero-subtitle {
   font-family: var(--font-serif);
   font-size: 1.8rem;
-  color: var(--accent-color);
+  color: var(--text-color);
   margin-bottom: 2rem;
   font-weight: 400;
 }

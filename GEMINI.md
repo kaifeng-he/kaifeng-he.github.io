@@ -12,7 +12,7 @@ This project is a personal academic website for **Kaifeng He**, a researcher at 
 
 ### Architecture
 - `src/App.tsx`: Main entry point orchestrating the different sections.
-- `src/sections/`: Contains the primary content areas (Hero, About, Research, Contact).
+- `src/sections/`: Contains the primary content areas (Hero, Research, Awards, Hobbies, Contact).
 - `src/components/`: Reusable UI components like `Navbar`.
 - `src/styles/global.css`: Defines the global theme variables (colors, typography) and base styles.
 - `public/`: Stores assets like profile photos, project overviews, and institution logos.
@@ -37,4 +37,4 @@ The project uses standard `npm` scripts:
 - **Typography**: 
   - Serif font (`Crimson Pro`): Used for headings and formal academic sections.
   - Sans-serif font (`Inter`): Used for body text and navigation.
-- **Colors**: SYSU Green (`#005826`) is used as the primary accent color in light mode.
+- **Colors**: Use neutral white/light-gray surfaces in light mode and charcoal surfaces (`#141414`, `#1c1c1c`) in dark mode. Use muted blue (`#365d88`) in light mode and a more saturated blue (`#70a5f5`) in dark mode for links and small accents; body text, buttons, borders, and metadata stay neutral.

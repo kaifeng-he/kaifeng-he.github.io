@@ -93,7 +93,7 @@
   font-family: var(--font-serif);
   font-style: italic;
   font-size: 1.1rem;
-  color: var(--accent-color);
+  color: var(--secondary-color);
   margin-bottom: 1.2rem;
 }
 
@@ -103,6 +103,13 @@
   line-height: 1.6;
   font-weight: 300;
   text-align: justify;
+}
+
+.pub-project-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
 /* Grants Section Styles */
@@ -148,12 +155,12 @@
 .grant-item:hover,
 .grant-item:focus-within {
   border-left-color: var(--accent-color);
-  background-color: var(--border-color);
+  background-color: var(--accent-soft-color);
 }
 
 .grant-item.expanded {
   border-left-color: var(--accent-color);
-  background-color: var(--border-color);
+  background-color: var(--accent-soft-color);
 }
 
 .grant-header {

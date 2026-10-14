@@ -6,13 +6,14 @@ interface PublicationProps {
   authors: React.ReactNode;
   venue?: string;
   link?: string;
+  projectLink?: string;
   description: string;
   isPreprint?: boolean;
   image?: string;
   coFirst?: boolean;
 }
 
-const Publication: React.FC<PublicationProps> = ({ title, authors, venue, link, description, isPreprint, image, coFirst }) => (
+const Publication: React.FC<PublicationProps> = ({ title, authors, venue, link, projectLink, description, isPreprint, image, coFirst }) => (
   <div className="pub-item">
     <div className="pub-content-wrapper">
       <div className="pub-info">
@@ -24,6 +25,9 @@ const Publication: React.FC<PublicationProps> = ({ title, authors, venue, link, 
         <div className="pub-authors">{authors}</div>
         {venue && <div className="pub-venue">{venue}</div>}
         <p className="pub-description">{description}</p>
+        {projectLink && (
+          <a className="pub-project-link" href={projectLink} target="_blank" rel="noopener noreferrer">Project website</a>
+        )}
       </div>
       {image && (
         <div className="pub-image">
@@ -89,26 +93,36 @@ const Research: React.FC = () => {
         <h2>Selected Publications</h2>
         <div className="publications-list">
           <Publication 
-            title="Towards Better Code Generation: Adaptive Decoding with Uncertainty Guidance"
+            title="AdaDec: An Uncertainty-Guided Lookahead Decoding Framework for LLM-based Code Generation"
             authors={<><strong>Kaifeng He</strong>, Mingwei Liu, Chong Wang, Zike Li, Yanlin Wang, Xin Peng, Zibin Zheng</>}
-            venue="ACM International Conference on the Foundations of Software Engineering (FSE), 2026"
+            venue="ACM International Conference on the Foundations of Software Engineering (FSE), 2026 · Accepted"
             link="https://arxiv.org/abs/2506.08980"
             image="/adadec-overview.png"
-            description="Proposed ADADEC, an uncertainty-guided adaptive decoding framework that optimizes code generation by dynamically detecting high-uncertainty steps and triggering lookahead-based reranking."
+            description="Proposed AdaDec, an uncertainty-guided adaptive decoding framework that optimizes code generation by dynamically detecting high-uncertainty steps and triggering lookahead-based reranking."
           />
           
           <Publication 
             title="Bridging Generation and Training: A Systematic Review of Quality Issues in LLMs for Code"
             authors={<><strong>Kaifeng He*</strong>, Xiaojun Zhang*, Peiliang Cai*, Mingwei Liu, Yanlin Wang, Chong Wang, Kaifeng Huang, Bihuan Chen, Xin Peng, Zibin Zheng</>}
-            venue="Manuscript under review"
-            link="https://sysuselab.github.io/From-Data-to-Code"
+            venue="ACM Transactions on Software Engineering and Methodology (TOSEM) · Under review"
+            link="https://arxiv.org/abs/2605.05267"
+            projectLink="https://sysuselab.github.io/From-Data-to-Code"
             // coFirst={true}
             image="/survey-overview.png"
             description="A systematic review linking training data defects to generated code quality in Code LLMs, establishing a multi-dimensional taxonomy and causal mapping framework."
           />
 
+          <Publication
+            title="RepoNorm: Acquiring and Verifying Repository Norms for Coding Agents"
+            authors={<><strong>Kaifeng He</strong>, Xiaojun Zhang, Zhenxi Chen, Christoph Treude, Mingwei Liu</>}
+            venue="ACM International Conference on the Foundations of Software Engineering (FSE), 2027 · Under review"
+            link="https://arxiv.org/abs/2610.07757"
+            image="/reponorm-overview.png"
+            description="Developed RepoNorm to acquire explicit repository norms and implicit code conventions, verify them against repository evidence and Git history, and deliver structured norm packages that improve coding agents' norm compliance."
+          />
+
           <Publication 
-            title="A Preliminary Study on the Robustness of Code Generation by Large Language Models"
+            title="Enhancing the Robustness of LLM-Generated Code: Empirical Study and Framework"
             authors={<>Zike Li, Mingwei Liu, Anji Li, <strong>Kaifeng He</strong>, Yanlin Wang, Xin Peng, Zibin Zheng</>}
             venue="arXiv:2503.20197, 2025"
             link="https://arxiv.org/abs/2503.20197"

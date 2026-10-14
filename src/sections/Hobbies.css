@@ -57,8 +57,175 @@
   font-family: var(--font-serif);
 }
 
+.hobby-details-list p,
+.hobby-details-copy p {
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.hobby-details-copy p + p {
+  margin-top: 0.65rem;
+}
+
+.hobby-details-list li + li {
+  margin-top: 0.45rem;
+  padding-top: 0.45rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.hobby-detail-card:hover {
+  transform: none;
+}
+
+.hobby-detail-card:focus-within {
+  border-color: var(--accent-color);
+}
+
+.hobby-panels {
+  display: grid;
+  flex: 1;
+}
+
+.hobby-panel {
+  grid-area: 1 / 1;
+  min-width: 0;
+  transition: opacity 0.45s ease, transform 0.45s ease, visibility 0.45s;
+}
+
+.hobby-intro {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.hobby-details {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(6px);
+}
+
+.show-details .hobby-intro {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-6px);
+}
+
+.show-details .hobby-details {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.debate-award {
+  display: grid;
+  grid-template-columns: 5rem minmax(0, 1fr);
+  gap: 0.65rem;
+  align-items: start;
+}
+
+.debate-award + .debate-award {
+  margin-top: 0.45rem;
+  padding-top: 0.45rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.debate-award-meta {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.45;
+}
+
+.debate-award-place {
+  color: var(--accent-color);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.debate-award-year {
+  color: var(--secondary-color);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.debate-award .debate-award-event {
+  color: var(--text-color);
+  font-size: 0.85rem;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.debate-award-event [lang='zh-CN'] {
+  white-space: nowrap;
+}
+
+.hobby-toggle {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 0.65rem;
+  min-height: 44px;
+  margin-top: 0.25rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--secondary-color);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.hobby-toggle:hover,
+.hobby-toggle:focus-visible {
+  color: var(--accent-color);
+}
+
+.hobby-toggle:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.hobby-toggle svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.45s ease;
+}
+
+.show-details .hobby-toggle svg {
+  transform: rotate(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hobby-panel,
+  .hobby-toggle svg {
+    transition: none;
+    transform: none;
+  }
+
+  .show-details .hobby-intro {
+    transform: none;
+  }
+}
+
 @media (max-width: 768px) {
   .hobbies-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .debate-award {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+
+  .debate-award-meta {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.5rem;
   }
 }

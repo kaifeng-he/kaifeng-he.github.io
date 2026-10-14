@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './sections/Hero';
 import Research from './sections/Research';
+import Awards from './sections/Awards';
 import Hobbies from './sections/Hobbies';
 import Contact from './sections/Contact';
 
@@ -27,6 +28,7 @@ function App() {
       <main>
         <Hero />
         <Research />
+        <Awards />
         <Hobbies />
         <Contact />
       </main>

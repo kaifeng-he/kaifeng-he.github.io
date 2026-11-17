@@ -1,10 +1,17 @@
 import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './sections/Hero';
+import Education from './sections/Education';
 import Research from './sections/Research';
 import Awards from './sections/Awards';
 import Hobbies from './sections/Hobbies';
 import Contact from './sections/Contact';
+
+const lastUpdated = new Intl.DateTimeFormat('en-GB', {
+  dateStyle: 'medium',
+  timeStyle: 'short',
+  timeZone: 'Asia/Shanghai',
+}).format(new Date(__SITE_UPDATED_AT__));
 
 function App() {
   const [theme, setTheme] = useState(() => {
@@ -27,6 +34,7 @@ function App() {
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <main>
         <Hero />
+        <Education />
         <Research />
         <Awards />
         <Hobbies />
@@ -34,6 +42,9 @@ function App() {
       </main>
       <footer className="footer container">
         <p>&copy; {new Date().getFullYear()} kaifeng-he. All rights reserved.</p>
+        <p className="last-updated">
+          Last updated: <time dateTime={__SITE_UPDATED_AT__}>{lastUpdated}</time> (UTC+8)
+        </p>
       </footer>
     </div>
   )

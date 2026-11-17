@@ -1,5 +1,12 @@
 # React + TypeScript + Vite
 
+The footer's “Last updated” timestamp is injected by Vite at build time and displayed in the Asia/Shanghai time zone (UTC+8). Each `npm run build` automatically refreshes it for deployment; visitors reloading the page do not change it. During local development, it reflects when the Vite server started.
+
+Institution emblems in the education timeline are stored locally, unchanged from official university assets:
+
+- `public/sysu-emblem.png`: [Sun Yat-sen University introduction and emblem](https://www.sysu.edu.cn/xxg/zdjj1.htm), [original image](https://www.sysu.edu.cn/__local/C/8E/79/6236A91AEAFBB9F7F2C23A9F836_97F1F3B5_178FF.png).
+- `public/cuhk-shenzhen-emblem.png`: [The Chinese University of Hong Kong, Shenzhen](https://www.cuhk.edu.cn/zh-hans), [official site icon (PNG)](https://www.cuhk.edu.cn/themes/custom/cuhk_ui/favicon.ico).
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:

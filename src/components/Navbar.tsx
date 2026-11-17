@@ -20,6 +20,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
         </div>
         <div className="navbar-right">
           <ul id="site-navigation" className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
+            <li><a href="#education" onClick={closeMenu}>Background</a></li>
             <li><a href="#research" onClick={closeMenu}>Research</a></li>
             <li><a href="#grants" onClick={closeMenu}>Projects</a></li>
             <li><a href="#awards" onClick={closeMenu}>Awards</a></li>

@@ -139,7 +139,7 @@ const Research: React.FC = () => {
             program="China National-Level Innovation Project"
             role="Project Leader"
             period="2026–2027"
-            funding="¥24,000"
+            funding="¥20,000"
             description="This project focuses on 'Engineering Specification-Driven Code Generation and Quality Governance,' aiming to build a mechanism that actively guarantees code architectural quality. Key research includes: 1) Constructing structured knowledge bases for engineering specs to bridge natural language and machine-parsable rules. 2) Developing collaborative control techniques using RAG and decoding intervention to block non-compliant code during inference. 3) Establishing adaptive evolution mechanisms for agents to perceive different engineering environments and repair non-standard modules."
           />
           <Grant 

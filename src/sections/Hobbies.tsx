@@ -175,7 +175,7 @@ const FitnessCard: React.FC = () => (
 
 const Hobbies: React.FC = () => {
   return (
-    <section id="hobbies" className="section-alt">
+    <section id="hobbies">
       <div className="container">
         <h2>Hobbies & Interests</h2>
         <div className="hobbies-grid">

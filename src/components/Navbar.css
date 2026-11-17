@@ -43,13 +43,13 @@
 
 .navbar-links {
   display: flex;
-  gap: 1.75rem;
+  gap: 1.25rem;
 }
 
 .navbar-links li a {
   color: var(--secondary-color);
   font-weight: 400;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }

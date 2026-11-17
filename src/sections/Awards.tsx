@@ -4,7 +4,7 @@ import './Awards.css';
 const awards = [
   {
     title: 'China National-Level Innovation Project',
-    details: 'Project Leader · 5 out of 90 · CNY 24,000',
+    details: 'Project Leader · 5 out of 90 · CNY 20,000',
     period: '2026–2027',
   },
   {

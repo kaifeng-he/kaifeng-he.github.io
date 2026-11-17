@@ -32,7 +32,8 @@ const Hero: React.FC = () => {
             </p>
             <div className="hero-description">
               Focused on Artificial Intelligence for Software Engineering (AI4SE).
-              Advised by <a href="https://mingwei-liu.github.io/" target="_blank" rel="noopener noreferrer">Prof. Mingwei Liu</a> at Sun Yat-sen University.
+              {' '}I explore how large language models can generate more reliable code and better support software development.
+              {' '}My interests include reasoning and knowledge-augmented methods for tackling software engineering challenges.
             </div>
             <div className="hero-cta">
               <a href="#research" className="btn-academic">View Publications</a>

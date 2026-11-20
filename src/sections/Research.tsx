@@ -1,33 +1,57 @@
 import React, { useId, useState } from 'react';
+import arxivIcon from '../assets/arxiv.svg';
+import githubIcon from '../assets/github.svg';
+import huggingfaceIcon from '../assets/huggingface.svg';
 import './Research.css';
+
+function lineIcon(path: string) {
+  return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"
+    strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={path} /></svg>;
+}
+
+const badgeIcons = {
+  arXiv: <img src={arxivIcon} alt="" />,
+  'FSE 2026': lineIcon('M3 9l9-6 9 6z M5 12v6 M10 12v6 M14 12v6 M19 12v6 M3 21h18'),
+  GitHub: <img src={githubIcon} alt="" />,
+  'Project page': lineIcon('M22 12a10 10 0 1 0-20 0 10 10 0 0 0 20 0z M2 12h20 M12 2c-5 5-5 15 0 20 5-5 5-15 0-20z'),
+  Dataset: <img src={huggingfaceIcon} alt="" />,
+  Leaderboard: <img src={huggingfaceIcon} alt="" />,
+  Code: lineIcon('M8 7l-5 5 5 5 M16 7l5 5-5 5 M14 4l-4 16'),
+};
+
+type Resource = { label: keyof typeof badgeIcons; href: string };
 
 interface PublicationProps {
   title: string;
   authors: React.ReactNode;
   venue?: string;
-  link?: string;
-  projectLink?: string;
+  link: string;
+  resources: Resource[];
   description: string;
-  isPreprint?: boolean;
   image?: string;
   coFirst?: boolean;
 }
 
-const Publication: React.FC<PublicationProps> = ({ title, authors, venue, link, projectLink, description, isPreprint, image, coFirst }) => (
+const Publication: React.FC<PublicationProps> = ({ title, authors, venue, link, resources, description, image, coFirst }) => (
   <div className="pub-item">
     <div className="pub-content-wrapper">
       <div className="pub-info">
         <h3 className="pub-title">
-          {link ? <a href={link} target="_blank" rel="noopener noreferrer">{title}</a> : title}
-          {isPreprint && <span className="preprint-tag">Preprint</span>}
+          {title}
           {coFirst && <span className="co-first-tag">Co-first author</span>}
         </h3>
         <div className="pub-authors">{authors}</div>
         {venue && <div className="pub-venue">{venue}</div>}
         <p className="pub-description">{description}</p>
-        {projectLink && (
-          <a className="pub-project-link" href={projectLink} target="_blank" rel="noopener noreferrer">Project website</a>
-        )}
+        <div className="pub-resources">
+          {([{ label: 'arXiv', href: link }, ...resources] satisfies Resource[]).map(({ label, href }) => (
+            <a key={label} className="pub-badge" data-resource={label} href={href}
+              target="_blank" rel="noopener noreferrer" aria-label={`${label} — ${title}`}>
+              {badgeIcons[label]}
+              {label}
+            </a>
+          ))}
+        </div>
       </div>
       {image && (
         <div className="pub-image">
@@ -97,6 +121,10 @@ const Research: React.FC = () => {
             authors={<><strong>Kaifeng He</strong>, Mingwei Liu, Chong Wang, Zike Li, Yanlin Wang, Xin Peng, Zibin Zheng</>}
             venue="ACM International Conference on the Foundations of Software Engineering (FSE), 2026 · Accepted"
             link="https://arxiv.org/abs/2506.08980"
+            resources={[
+              { label: 'FSE 2026', href: 'https://conf.researchr.org/details/fse-2026/fse-2026-research-papers/71/AdaDec-A-Uncertainty-Guided-Lookahead-Decoding-Framework-for-LLM-based-Code-Generati' },
+              { label: 'GitHub', href: 'https://github.com/SYSUSELab/AdaDec' },
+            ]}
             image="/adadec-overview.png"
             description="Proposed AdaDec, an uncertainty-guided adaptive decoding framework that optimizes code generation by dynamically detecting high-uncertainty steps and triggering lookahead-based reranking."
           />
@@ -106,7 +134,10 @@ const Research: React.FC = () => {
             authors={<><strong>Kaifeng He*</strong>, Xiaojun Zhang*, Peiliang Cai*, Mingwei Liu, Yanlin Wang, Chong Wang, Kaifeng Huang, Bihuan Chen, Xin Peng, Zibin Zheng</>}
             venue="ACM Transactions on Software Engineering and Methodology (TOSEM) · Under review"
             link="https://arxiv.org/abs/2605.05267"
-            projectLink="https://sysuselab.github.io/From-Data-to-Code"
+            resources={[
+              { label: 'GitHub', href: 'https://github.com/SYSUSELab/From-Data-to-Code' },
+              { label: 'Project page', href: 'https://sysuselab.github.io/From-Data-to-Code/' },
+            ]}
             // coFirst={true}
             image="/survey-overview.png"
             description="A systematic review linking training data defects to generated code quality in Code LLMs, establishing a multi-dimensional taxonomy and causal mapping framework."
@@ -117,16 +148,23 @@ const Research: React.FC = () => {
             authors={<><strong>Kaifeng He</strong>, Xiaojun Zhang, Zhenxi Chen, Christoph Treude, Mingwei Liu</>}
             venue="ACM International Conference on the Foundations of Software Engineering (FSE), 2027 · Under review"
             link="https://arxiv.org/abs/2610.07757"
+            resources={[
+              { label: 'GitHub', href: 'https://github.com/SYSUSELab/RepoNorm' },
+              { label: 'Dataset', href: 'https://huggingface.co/datasets/SYSUSELab/RepoNormBench' },
+              { label: 'Leaderboard', href: 'https://huggingface.co/spaces/SYSUSELab/RepoNormBench-Leaderboard' },
+            ]}
             image="/reponorm-overview.png"
             description="Developed RepoNorm to acquire explicit repository norms and implicit code conventions, verify them against repository evidence and Git history, and deliver structured norm packages that improve coding agents' norm compliance."
           />
 
           <Publication 
-            title="Enhancing the Robustness of LLM-Generated Code: Empirical Study and Framework"
+            title="A Preliminary Study on the Robustness of Code Generation by Large Language Models"
             authors={<>Zike Li, Mingwei Liu, Anji Li, <strong>Kaifeng He</strong>, Yanlin Wang, Xin Peng, Zibin Zheng</>}
             venue="arXiv:2503.20197, 2025"
             link="https://arxiv.org/abs/2503.20197"
-            isPreprint={true}
+            resources={[
+              { label: 'Code', href: 'https://anonymous.4open.science/r/RobGen-838C/README.md' },
+            ]}
             image="/robgen-overview.png"
             description="Investigated the robustness of code generation, highlighting issues in conditional checks (e.g., null-pointer), and proposed RobGen, a training-free framework for improved robustness."
           />

@@ -50,16 +50,32 @@
 .hero-social-links {
   display: flex;
   justify-content: center;
-  gap: 1.2rem;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.8rem;
   font-size: 0.9rem;
 }
 
 .hero-social-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
   color: var(--secondary-color);
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: all 0.2s ease;
   font-weight: 400;
+}
+
+.hero-social-links svg,
+.hero-social-links img,
+.hero-github-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.hero-github-icon {
+  background: currentColor;
+  mask: url('../assets/github.svg') center / contain no-repeat;
 }
 
 .hero-social-links a:hover {

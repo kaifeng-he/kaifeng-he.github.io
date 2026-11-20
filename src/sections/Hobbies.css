@@ -77,7 +77,7 @@
   transform: none;
 }
 
-.hobby-detail-card:focus-within {
+.hobby-detail-card:has(.hobby-toggle:focus-visible) {
   border-color: var(--accent-color);
 }
 

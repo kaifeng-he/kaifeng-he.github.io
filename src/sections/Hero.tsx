@@ -1,4 +1,5 @@
 import React from 'react';
+import scholarIcon from '../assets/google-scholar.svg';
 import './Hero.css';
 
 const Hero: React.FC = () => {
@@ -18,9 +19,21 @@ const Hero: React.FC = () => {
               />
             </div>
             <div className="hero-social-links">
-              <a href="mailto:hekf5@mail2.sysu.edu.cn" title="Email">Email</a>
-              <a href="https://github.com/kaifeng-he" target="_blank" rel="noopener noreferrer" title="GitHub">GitHub</a>
-              <a href="https://scholar.google.com/citations?user=67fge3IAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" title="Google Scholar">Scholar</a>
+              <a href="mailto:hekf5@mail2.sysu.edu.cn" title="Email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+                  <rect x="2" y="4" width="20" height="16" rx="3" />
+                  <path d="m3 6 9 7 9-7" />
+                </svg>
+                Email
+              </a>
+              <a href="https://github.com/kaifeng-he" target="_blank" rel="noopener noreferrer" title="GitHub">
+                <span className="hero-github-icon" aria-hidden="true" />
+                GitHub
+              </a>
+              <a href="https://scholar.google.com/citations?user=67fge3IAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" title="Google Scholar">
+                <img src={scholarIcon} alt="" />
+                Scholar
+              </a>
             </div>
           </div>
           <div className="hero-text-content">

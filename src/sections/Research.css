@@ -58,7 +58,7 @@
   font-weight: 600;
 }
 
-.preprint-tag, .co-first-tag {
+.co-first-tag {
   font-size: 0.7rem;
   background-color: var(--section-bg);
   color: var(--secondary-color);
@@ -105,11 +105,46 @@
   text-align: justify;
 }
 
-.pub-project-link {
-  display: inline-block;
-  margin-top: 0.75rem;
-  font-size: 0.9rem;
-  font-weight: 500;
+.pub-resources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 1rem;
+}
+
+.pub-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42rem;
+  padding: 0.28rem 0.62rem;
+  border-radius: 4px;
+  background: var(--badge-color, #354252);
+  color: var(--badge-ink, white);
+  font: 600 0.875rem/1.4 var(--font-sans);
+}
+
+.pub-badge svg, .pub-badge img {
+  width: 1rem;
+  height: 1rem;
+}
+
+.pub-badge[data-resource="arXiv"] { --badge-color: #b31b1b; }
+.pub-badge[data-resource="GitHub"] { --badge-color: #24292f; }
+.pub-badge[data-resource="Code"] { --badge-color: #057261; }
+.pub-badge[data-resource="FSE 2026"] { --badge-color: #6938c4; }
+.pub-badge[data-resource="Project page"] { --badge-color: #095bc6; }
+.pub-badge[data-resource="Dataset"] { --badge-color: #ffcf42; --badge-ink: #332409; }
+.pub-badge[data-resource="Leaderboard"] { --badge-color: #ffad32; --badge-ink: #332409; }
+
+.pub-badge:hover, .pub-badge:focus-visible {
+  color: var(--badge-ink, white);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.pub-badge:focus-visible {
+  outline: 2px solid var(--text-color);
+  outline-offset: 3px;
 }
 
 /* Grants Section Styles */
@@ -274,7 +309,7 @@
     font-size: 1.3rem;
   }
 
-  .preprint-tag, .co-first-tag {
+  .co-first-tag {
     display: inline-block;
     margin-left: 0;
     margin-top: 0.5rem;
